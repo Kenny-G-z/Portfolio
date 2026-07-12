@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}       
+        
+li {
+    font-size: 20px;
+}
+
+a {
+    font-size: 25px;
+}
+
+body {
+    margin: 40px;
+    font-family: Pacifico, cursive;
+    background-color: #fffdf5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    margin: 0 50px;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
