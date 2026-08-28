@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenny G | Front-End Developer</title>
+  <title>Kenny's Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <!-- Navigation -->
+<body>
   <header class="navbar">
-    <a href="index.html" class="logo">&lt;Kenny.dev/&gt;</a>
+    <a href="index.html" class="logo">Kenny G</a>
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="projects.html">Projects</a>
@@ -23,124 +23,68 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-glow"></div>
       <div class="hero-content">
-        <span class="badge">🚀 Available for Front-End Roles & Projects</span>
-        <h1>Hi, I'm <span class="gradient-text">Kenny</span>.<br>I build responsive web experiences.</h1>
-        <p class="hero-subtext">
-          Front-End Developer focused on clean UI architecture, interactive JavaScript applications, and modern responsive design.
-        </p>
+        <span class="badge">Available for Projects</span>
+        <h1>Hi, I'm <span class="gradient-text">Kenny</span>.</h1>
+        <p class="hero-subtext">I build web projects to practice my skills.</p>
         <div class="hero-actions">
-          <a href="projects.html" class="btn btn-primary">Explore All Projects</a>
-          <a href="https://github.com/Kenny-G-z" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile ↗</a>
+          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+          <a href="https://github.com/Kenny-G-z" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile</a>
         </div>
       </div>
     </section>
 
-    <!-- Skills Snapshot -->
     <section class="skills-section">
       <h2 class="section-title">Core Skills</h2>
       <div class="skills-grid">
+
         <div class="skill-card">
-          <div class="skill-icon">⚡</div>
-          <h3>Front-End UI</h3>
-          <p>HTML5, Modern CSS3, Flexbox/Grid, Responsive Layouts, UI Styling</p>
+          <h3>Front-End</h3>
+          <ul class="skill-list">
+            <li>HTML5</li>
+            <li>Modern CSS3</li>
+            <li>Responsive Architecture</li>
+            <li>Flexbox & Grid</li>
+          </ul>
         </div>
+
         <div class="skill-card">
-          <div class="skill-icon">🔗</div>
-          <h3>JavaScript & APIs</h3>
-          <p>ES6+ Syntax, Fetch API, Async/Await, Real-time DOM Manipulation, RegEx</p>
+          <h3>Application Logic</h3>
+          <ul class="skill-list">
+            <li>Machine Learning</li>
+            <li>API Integration</li>
+            <li>Deterministic State</li>
+            <li>Asynchronous I/O</li>
+          </ul>
         </div>
+
         <div class="skill-card">
-          <div class="skill-icon">🛠️</div>
           <h3>Tooling & Workflow</h3>
-          <p>Git, GitHub, GitHub Pages, Web Performance, Browser DevTools</p>
+          <ul class="skill-list">
+            <li>GitHub Repositories</li>
+            <li>Render Deployment</li>
+            <li>VS Code</li>
+            <li>Browser DevTools</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects Spotlight (Top 3) -->
-    <section class="featured-section">
-      <div class="section-header-row">
-        <h2 class="section-title">Featured Highlights</h2>
-        <a href="projects.html" class="view-all-link">View all 6 projects →</a>
-      </div>
-      
-      <div class="projects-grid">
-        <!-- AI Chatbot -->
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">API Integration</span>
-            <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/AI-Chatbot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/AI-Chatbot/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
-            </div>
-          </div>
-          <h3>AI Chatbot</h3>
-          <p>Conversational AI interface featuring dynamic response streaming, auto-scrolling message feeds, and async request handling.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>REST API</span>
-            <span>CSS3</span>
-          </div>
-        </article>
-
-        <!-- Weather App -->
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">RESTful API</span>
-            <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/Weather-App" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/Weather-App/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
-            </div>
-          </div>
-          <h3>Weather App</h3>
-          <p>Real-time weather dashboard querying meteorological APIs for live temperature, humidity, wind conditions, and multi-day forecasts.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>Fetch API</span>
-            <span>JSON</span>
-          </div>
-        </article>
-
-        <!-- Wordle Clone -->
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">Game Logic</span>
-            <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/Wordle" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/Wordle/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
-            </div>
-          </div>
-          <h3>Wordle Clone</h3>
-          <p>Word puzzle game featuring multi-attempt tile evaluation algorithms, dual virtual/physical keyboard inputs, and flip animations.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>CSS Animations</span>
-            <span>State Management</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <div class="contact-box">
-        <h2>Let's Build Something Together</h2>
-        <p>I'm always open to discussing new front-end opportunities, projects, or collaborations.</p>
+        <h2>Get In Touch</h2>
+        <p>I'm always open to new projects, collaborations, or opportunities.</p>
         <div class="contact-buttons">
           <a href="https://github.com/Kenny-G-z" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Connect on GitHub</a>
-          <a href="mailto:your-email@example.com" class="btn btn-secondary">Send an Email</a>
+          <a href="mailto:gosalargk@gmail.com" class="btn btn-secondary">Send an Email</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Kenny G. Designed & built with clean code.</p>
-  </footer>
-
+  <footer><p>© 2026 Kenny G.</p></footer>
 </body>
+
 </html>
