@@ -4,41 +4,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* ==========================================================================
-   Design Tokens & Violet/Purple Theme
+   Design Tokens (Indigo-Blue Primary with Subtle Purple Accent)
    ========================================================================== */
 :root {
   /* Surfaces */
-  --bg-main: #faf8fc;
+  --bg-main: #f8fafc;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
 
   /* Borders */
-  --border-color: #ede8f5;
-  --border-hover: #d8b4fe;
-  --border-focus: #9333ea;
+  --border-color: #e2e8f0;
+  --border-hover: #c7d2fe;
+  --border-focus: #4f46e5;
 
   /* Text Colors */
-  --text-main: #180d28;
-  --text-muted: #5b4b70;
-  --text-dim: #9d8fb3;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
 
-  /* Vibrant Purple Accents */
-  --accent-primary: #7e22ce;       /* Deep Amethyst */
-  --accent-primary-hover: #6b21a8; /* Dark Purple */
-  --accent-secondary: #a855f7;     /* Bright Violet */
-  --accent-spark: #c084fc;         /* Lilac Accent */
+  /* Color Balance: Primarily Blue/Indigo with a Hint of Purple */
+  --accent-primary: #2563eb;          /* Vibrant Royal Blue */
+  --accent-primary-hover: #1d4ed8;    /* Deep Blue */
+  --accent-secondary: #4f46e5;        /* Indigo */
+  --accent-purple-tint: #7c3aed;      /* Subtle Purple Accent */
 
   /* Tag Badges */
-  --accent-tag-bg: #f5f3ff;
-  --accent-tag-text: #6b21a8;
-  --accent-tag-border: #ddd6fe;
+  --accent-tag-bg: #eff6ff;
+  --accent-tag-text: #1d4ed8;
+  --accent-tag-border: #bfdbfe;
 
-  /* Ambient Glows & Shadows */
-  --shadow-sm: 0 2px 4px rgba(24, 13, 40, 0.04), 0 1px 2px rgba(24, 13, 40, 0.02);
-  --shadow-md: 0 6px 16px rgba(24, 13, 40, 0.06), 0 2px 6px rgba(24, 13, 40, 0.03);
-  --shadow-lg: 0 14px 30px rgba(126, 34, 206, 0.14), 0 4px 10px rgba(24, 13, 40, 0.04);
-  --shadow-btn: 0 4px 16px rgba(126, 34, 206, 0.35);
+  /* Unified Button Color */
+  --btn-bg: #2563eb;
+  --btn-bg-hover: #1d4ed8;
+  --btn-text: #ffffff;
+  --shadow-btn: 0 4px 14px rgba(37, 99, 235, 0.3);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 12px 28px rgba(37, 99, 235, 0.12), 0 4px 10px rgba(15, 23, 42, 0.04);
 
   /* Typography */
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -46,10 +51,10 @@
   --font-title: 'Pacifico', cursive;
 
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
   --radius-full: 9999px;
-  --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --max-width: 1120px;
 }
 
@@ -67,8 +72,8 @@ html {
   font-family: var(--font-body);
   background-color: var(--bg-main);
   background-image: 
-    radial-gradient(at 10% 20%, rgba(168, 85, 247, 0.06) 0px, transparent 50%),
-    radial-gradient(at 90% 80%, rgba(126, 34, 206, 0.05) 0px, transparent 50%);
+    radial-gradient(at 10% 15%, rgba(37, 99, 235, 0.06) 0px, transparent 50%),
+    radial-gradient(at 90% 85%, rgba(124, 58, 237, 0.04) 0px, transparent 50%);
   color: var(--text-main);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -85,7 +90,7 @@ main {
 }
 
 /* ==========================================================================
-   Global Pacifico Headings Rule (Centered)
+   Centered Pacifico Headings
    ========================================================================== */
 h1, h2, h3,
 .section-title,
@@ -97,20 +102,18 @@ h1, h2, h3,
 }
 
 /* ==========================================================================
-   Navigation Bar
+   Full-Width Navigation Bar
    ========================================================================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.15rem 2rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  width: 100%;
+  padding: 1.15rem 2.5rem;
+  width: 100%;                  /* Spans the full page edge-to-edge */
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
   animation: fadeInDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -150,22 +153,46 @@ h1, h2, h3,
   color: var(--accent-primary);
 }
 
+/* ==========================================================================
+   Unified Buttons (All Identical Background & Text)
+   ========================================================================== */
+.btn,
+.btn-primary,
+.btn-secondary,
 .btn-nav {
-  background: var(--accent-tag-bg);
-  color: var(--accent-primary) !important;
-  padding: 0.45rem 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.72rem 1.6rem;
   border-radius: var(--radius-md);
-  border: 1px solid var(--accent-tag-border);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  background: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-btn);
+  transition: var(--transition);
+  cursor: pointer;
 }
 
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
 .btn-nav:hover {
-  background: #ede9fe;
-  border-color: var(--accent-primary);
-  transform: translateY(-1px);
+  background: var(--btn-bg-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-nav {
+  padding: 0.45rem 1.1rem;
 }
 
 /* ==========================================================================
-   Hero & Page Headers (Unified Glow & Styling)
+   Hero & Page Headers
    ========================================================================== */
 .hero-section,
 .page-header-wrapper {
@@ -183,7 +210,7 @@ h1, h2, h3,
   transform: translate(-50%, -50%);
   width: 580px;
   height: 280px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(126, 34, 206, 0.1) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(124, 58, 237, 0.08) 50%, transparent 70%);
   filter: blur(75px);
   z-index: 0;
   pointer-events: none;
@@ -220,11 +247,12 @@ h1, h2, h3,
   text-align: center;
 }
 
+/* Mostly Blue with a Touch of Purple at the Tail */
 .gradient-text {
   font-family: var(--font-title);
   font-weight: 400;
   padding-right: 0.15em;
-  background: linear-gradient(135deg, #7e22ce 0%, #a855f7 50%, #c084fc 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 60%, #7c3aed 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -250,51 +278,6 @@ h1, h2, h3,
 }
 
 /* ==========================================================================
-   Buttons
-   ========================================================================== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.65rem;
-  border-radius: var(--radius-md);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-decoration: none;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #7e22ce 0%, #9333ea 100%);
-  color: #ffffff;
-  box-shadow: var(--shadow-btn);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(126, 34, 206, 0.45);
-  background: linear-gradient(135deg, #6b21a8 0%, #7e22ce 100%);
-}
-
-.btn-secondary {
-  background: var(--bg-surface);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-}
-
-.btn-secondary:hover {
-  background: #fdfcff;
-  border-color: var(--border-hover);
-  color: var(--accent-primary);
-  transform: translateY(-2px);
-}
-
-/* ==========================================================================
    Section Layouts
    ========================================================================== */
 section {
@@ -312,7 +295,7 @@ section {
 }
 
 /* ==========================================================================
-   Skills Grid (Home Page)
+   Skills Grid & Standard Bullet Points
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -324,7 +307,7 @@ section {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 2.25rem 1.75rem;
+  padding: 2.25rem 2rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   display: flex;
@@ -344,33 +327,29 @@ section {
   text-align: center;
 }
 
+/* Real Standard Round Bullet Points */
 .skill-list {
-  list-style: none;
+  list-style-type: disc;
+  list-style-position: inside;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.75rem;
+  padding-left: 0.5rem;
 }
 
 .skill-list li {
   color: var(--text-muted);
   font-size: 0.95rem;
-  display: flex;
-  align-items: center;
   font-weight: 500;
+  line-height: 1.5;
 }
 
-.skill-list li::before {
-  content: "✦";
-  color: var(--accent-secondary);
-  font-weight: bold;
-  font-size: 0.95rem;
-  display: inline-block;
-  width: 1.4rem;
-  line-height: 1;
+.skill-list li::marker {
+  color: var(--accent-primary);
 }
 
 /* ==========================================================================
-   Projects Grid & 2x2 Tech Stack (Projects Page)
+   Projects Grid & 2x2 Tech Stack
    ========================================================================== */
 .projects-grid {
   display: grid;
@@ -442,7 +421,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 0.55rem;
   padding-top: 1.25rem;
-  border-top: 1px solid #f8f6fc;
+  border-top: 1px solid #f1f5f9;
 }
 
 .tech-stack span {
@@ -514,7 +493,7 @@ section {
 }
 
 .contact-box {
-  background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
   border: 1px solid var(--accent-tag-border);
   border-radius: var(--radius-lg);
   padding: 3.25rem 2rem;
