@@ -36,11 +36,9 @@
   --max-width: 1120px;
 }
 
-* {
-  box-sizing: border-box;
+* {box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0;}
 
 html {
   scroll-behavior: smooth;
@@ -121,8 +119,7 @@ p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .
   transition: var(--transition);
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover, .nav-links a.active {
   color: var(--accent-primary);
 }
 
@@ -158,14 +155,14 @@ p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .
 .hero-section {
   position: relative;
   text-align: center;
-  padding: 3.5rem 1.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 0; 
   overflow: hidden;
 }
 
 .page-header, .page-header-wrapper {
   position: relative;
   text-align: center;
-  padding: 3rem 1.5rem 0.5rem;
+  padding: 2.5rem 1.5rem 0; 
   overflow: hidden;
 }
 
@@ -194,7 +191,7 @@ p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .
 .page-title {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.25;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0; 
   color: var(--text-main) !important;
   text-align: center;
 }
@@ -209,12 +206,11 @@ p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .
   -webkit-text-fill-color: transparent;
 }
 
-/* Tiny space added above subheading (margin-top: 0.5rem) */
 .hero-subtext {
   font-size: 1.15rem;
   color: var(--text-muted);
-  margin-top: 0.5rem;
-  margin-bottom: 1.25rem;
+  margin-top: 0.6rem; 
+  margin-bottom: 1.5rem; 
   font-weight: 500;
   max-width: 620px;
   margin-left: auto;
@@ -222,12 +218,11 @@ p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .
   text-align: center;
 }
 
-/* Tiny space added above subheading (margin-top: 0.5rem) */
 .page-subtitle {
   font-size: 1.05rem;
   color: var(--text-muted);
-  margin-top: 0.5rem;
-  margin-bottom: 1rem !important;
+  margin-top: 0.6rem; 
+  margin-bottom: 1.5rem; 
   font-weight: 500;
   max-width: 620px;
   margin-left: auto;
@@ -240,6 +235,7 @@ p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -250,7 +246,7 @@ section {
 }
 
 .all-projects-section, .about-content-section {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   padding-bottom: 3.5rem;
 }
 
