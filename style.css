@@ -73,7 +73,7 @@ h1, h2, h3, h4, .section-title, .page-title {
   color: var(--text-main) !important;
 }
 
-p, span, a, li, label, input, textarea, button,.hero-subtext,.page-subtitle,.badge,footer {
+p, span, a, li, label, input, textarea, button, .hero-subtext, .page-subtitle, .badge, footer {
   font-family: var(--font-body);
 }
 
@@ -158,14 +158,14 @@ p, span, a, li, label, input, textarea, button,.hero-subtext,.page-subtitle,.bad
 .hero-section {
   position: relative;
   text-align: center;
-  padding: 3rem 1.5rem 1rem;
+  padding: 3.5rem 1.5rem 1.5rem;
   overflow: hidden;
 }
 
 .page-header, .page-header-wrapper {
   position: relative;
   text-align: center;
-  padding: 2.25rem 1.5rem 0;
+  padding: 3rem 1.5rem 0.5rem;
   overflow: hidden;
 }
 
@@ -190,18 +190,31 @@ p, span, a, li, label, input, textarea, button,.hero-subtext,.page-subtitle,.bad
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
+.hero-content h1,
 .page-title {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
-  line-height: 1.15;
+  line-height: 1.25;
   margin-bottom: 0.25rem;
   color: var(--text-main) !important;
   text-align: center;
 }
 
-.page-subtitle {
-  font-size: 1.05rem;
+.gradient-text {
+  font-family: var(--font-title);
+  font-weight: 400;
+  padding-right: 0.15em;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 60%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tiny space added above subheading (margin-top: 0.5rem) */
+.hero-subtext {
+  font-size: 1.15rem;
   color: var(--text-muted);
-  margin-bottom: 0 !important; 
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
   font-weight: 500;
   max-width: 620px;
   margin-left: auto;
@@ -209,58 +222,36 @@ p, span, a, li, label, input, textarea, button,.hero-subtext,.page-subtitle,.bad
   text-align: center;
 }
 
-section {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem;
-  width: 100%;
-}
-
-.all-projects-section, .about-content-section {
-  padding-top: 1.25rem !important;
-  padding-bottom: 3rem;
-}
-
-.about-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem 2rem; 
-  max-width: 850px;
-  margin: 0 auto;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-}
-
-.about-card h2 {
-  font-size: 1.85rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-main) !important;
+/* Tiny space added above subheading (margin-top: 0.5rem) */
+.page-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem !important;
+  font-weight: 500;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
-.about-card .sub-heading {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.about-card p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 1.5rem 2.25rem;
+  padding: 1.75rem 1.5rem;
   width: 100%;
 }
 
 .all-projects-section, .about-content-section {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .section-title {
@@ -411,7 +402,7 @@ section {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 3rem 2.5rem;
+  padding: 2.75rem 2.25rem;
   max-width: 850px;
   margin: 0 auto;
   box-shadow: var(--shadow-md);
@@ -526,47 +517,26 @@ footer {
   }
 }
 
-.skill-card,.project-card,.about-card, .contact-box {
+.skill-card, .project-card, .about-card, .contact-box {
   animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .skills-grid .skill-card:nth-child(1),
-
-.projects-grid .project-card:nth-child(1) { 
-    animation-delay: 0.25s; 
-}
-
+.projects-grid .project-card:nth-child(1) { animation-delay: 0.2s; }
 .skills-grid .skill-card:nth-child(2),
-
-.projects-grid .project-card:nth-child(2) { 
-    animation-delay: 0.25s; 
-}
-
+.projects-grid .project-card:nth-child(2) { animation-delay: 0.28s; }
 .skills-grid .skill-card:nth-child(3),
-
-.projects-grid .project-card:nth-child(3) { 
-    animation-delay: 0.37s; 
-}
-.projects-grid .project-card:nth-child(4) { 
-    animation-delay: 0.47s; 
-}
-
-.projects-grid .project-card:nth-child(5) { 
-    animation-delay: 0.50s; 
-}
-
-.projects-grid .project-card:nth-child(6) { 
-    animation-delay: 0.67s; 
-}
+.projects-grid .project-card:nth-child(3) { animation-delay: 0.36s; }
+.projects-grid .project-card:nth-child(4) { animation-delay: 0.44s; }
+.projects-grid .project-card:nth-child(5) { animation-delay: 0.52s; }
+.projects-grid .project-card:nth-child(6) { animation-delay: 0.60s; }
 
 .contact-box, .about-card {
-  animation-delay: 0.37s;
+  animation-delay: 0.3s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
