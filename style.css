@@ -85,7 +85,7 @@ main {
 }
 
 /* ==========================================================================
-   Global Pacifico Headings Rule
+   Global Pacifico Headings Rule (Centered)
    ========================================================================== */
 h1, h2, h3,
 .section-title,
@@ -93,6 +93,7 @@ h1, h2, h3,
   font-family: var(--font-title);
   font-weight: 400;
   letter-spacing: 0.01em;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -216,6 +217,7 @@ h1, h2, h3,
   line-height: 1.25;
   margin-bottom: 0.85rem;
   color: var(--text-main);
+  text-align: center;
 }
 
 .gradient-text {
@@ -237,6 +239,7 @@ h1, h2, h3,
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .hero-actions {
@@ -338,6 +341,7 @@ section {
   font-size: 1.55rem;
   margin-bottom: 1.25rem;
   color: var(--accent-primary);
+  text-align: center;
 }
 
 .skill-list {
@@ -394,7 +398,7 @@ section {
 
 .project-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   margin-bottom: 0.75rem;
 }
@@ -421,6 +425,7 @@ section {
   font-size: 1.6rem;
   margin-bottom: 0.65rem;
   color: var(--text-main);
+  text-align: center;
 }
 
 .project-card p {
@@ -478,10 +483,12 @@ section {
   font-size: 1.95rem;
   margin-bottom: 0.85rem;
   color: var(--accent-primary);
+  text-align: center;
 }
 
 .about-card .sub-heading {
   margin-top: 2rem;
+  text-align: center;
 }
 
 .about-card p {
@@ -493,6 +500,7 @@ section {
 
 .about-actions {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin-top: 2.5rem;
   flex-wrap: wrap;
@@ -522,6 +530,7 @@ section {
   font-size: 2.3rem;
   margin-bottom: 0.5rem;
   color: var(--text-main);
+  text-align: center;
 }
 
 .contact-box p {
@@ -531,6 +540,7 @@ section {
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .contact-card-chips {
