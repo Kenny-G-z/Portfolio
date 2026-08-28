@@ -1,55 +1,33 @@
-/* ==========================================================================
-   Google Fonts Import
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-/* ==========================================================================
-   Design Tokens (Indigo-Blue Primary with Subtle Purple Accent)
-   ========================================================================== */
 :root {
-  /* Surfaces */
   --bg-main: #f8fafc;
   --bg-surface: #ffffff;
   --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
-
-  /* Borders */
   --border-color: #e2e8f0;
   --border-hover: #c7d2fe;
   --border-focus: #4f46e5;
-
-  /* Text Colors */
   --text-main: #0f172a;
   --text-muted: #475569;
   --text-dim: #94a3b8;
-
-  /* Color Balance */
-  --accent-primary: #2563eb;          /* Vibrant Royal Blue */
-  --accent-primary-hover: #1d4ed8;    /* Deep Blue */
-  --accent-secondary: #4f46e5;        /* Indigo */
-  --accent-purple-tint: #7c3aed;      /* Subtle Purple Accent */
-
-  /* Tag Badges */
+  --accent-primary: #2563eb;         
+  --accent-primary-hover: #1d4ed8;    
+  --accent-secondary: #4f46e5;       
+  --accent-purple-tint: #7c3aed;     
   --accent-tag-bg: #eff6ff;
   --accent-tag-text: #1d4ed8;
   --accent-tag-border: #bfdbfe;
-
-  /* Unified Button Color */
   --btn-bg: #2563eb;
   --btn-bg-hover: #1d4ed8;
   --btn-text: #ffffff;
   --shadow-btn: 0 4px 14px rgba(37, 99, 235, 0.3);
-
-  /* Shadows */
   --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
   --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
   --shadow-lg: 0 12px 28px rgba(37, 99, 235, 0.12), 0 4px 10px rgba(15, 23, 42, 0.04);
-
-  /* Typography */
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Fira Code', monospace;
   --font-title: 'Pacifico', cursive;
-
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -58,9 +36,6 @@
   --max-width: 1120px;
 }
 
-/* ==========================================================================
-   Reset & Base Styles
-   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -90,12 +65,7 @@ main {
   flex: 1;
 }
 
-/* ==========================================================================
-   All Titles: Pacifico (Centered, Dark, No Blue)
-   ========================================================================== */
-h1, h2, h3, h4,
-.section-title,
-.page-title {
+h1, h2, h3, h4, .section-title, .page-title {
   font-family: var(--font-title);
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -103,27 +73,10 @@ h1, h2, h3, h4,
   color: var(--text-main) !important;
 }
 
-/* ==========================================================================
-   All Non-Titles: Explicitly Plus Jakarta Sans
-   ========================================================================== */
-p, 
-span, 
-a, 
-li, 
-label, 
-input, 
-textarea, 
-button,
-.hero-subtext,
-.page-subtitle,
-.badge,
-footer {
+p, span, a, li, label, input, textarea, button,.hero-subtext,.page-subtitle,.badge,footer {
   font-family: var(--font-body);
 }
 
-/* ==========================================================================
-   Full-Width Navigation Bar
-   ========================================================================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -173,13 +126,7 @@ footer {
   color: var(--accent-primary);
 }
 
-/* ==========================================================================
-   Unified Buttons
-   ========================================================================== */
-.btn,
-.btn-primary,
-.btn-secondary,
-.btn-nav {
+.btn, .btn-primary, .btn-secondary, .btn-nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -198,10 +145,7 @@ footer {
   cursor: pointer;
 }
 
-.btn:hover,
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-nav:hover {
+.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-nav:hover {
   background: var(--btn-bg-hover) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
@@ -211,20 +155,21 @@ footer {
   padding: 0.45rem 1.1rem;
 }
 
-/* ==========================================================================
-   Hero & Compact Page Headers
-   ========================================================================== */
-.hero-section,
-.page-header,
-.page-header-wrapper {
+.hero-section {
   position: relative;
   text-align: center;
-  padding: 3rem 1.5rem 0.5rem;
+  padding: 3rem 1.5rem 1rem;
   overflow: hidden;
 }
 
-.hero-glow,
-.page-glow {
+.page-header, .page-header-wrapper {
+  position: relative;
+  text-align: center;
+  padding: 2.25rem 1.5rem 0;
+  overflow: hidden;
+}
+
+.hero-glow, .page-glow {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -237,8 +182,7 @@ footer {
   pointer-events: none;
 }
 
-.hero-content,
-.page-header-content {
+.hero-content, .page-header-content {
   position: relative;
   z-index: 1;
   max-width: 820px;
@@ -246,70 +190,68 @@ footer {
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
-.badge {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent-primary);
-  background: var(--accent-tag-bg);
-  border: 1px solid var(--accent-tag-border);
-  padding: 0.35rem 1.15rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.02em;
-}
-
-.hero-content h1,
 .page-title {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
-  line-height: 1.25;
+  line-height: 1.15;
+  margin-bottom: 0.25rem;
+  color: var(--text-main) !important;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 0 !important; 
+  font-weight: 500;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  width: 100%;
+}
+
+.all-projects-section, .about-content-section {
+  padding-top: 1.25rem !important;
+  padding-bottom: 3rem;
+}
+
+.about-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem; 
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.about-card h2 {
+  font-size: 1.85rem;
   margin-bottom: 0.5rem;
   color: var(--text-main) !important;
   text-align: center;
 }
 
-.gradient-text {
-  font-family: var(--font-title);
-  font-weight: 400;
-  padding-right: 0.15em;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 60%, #7c3aed 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-subtext {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  margin-bottom: 1.75rem;
-  font-weight: 500;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.page-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-muted);
+.about-card .sub-heading {
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.about-card p {
+  color: var(--text-muted);
+  font-size: 1rem;
   font-weight: 500;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ==========================================================================
-   Section Layouts
-   ========================================================================== */
 section {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -317,8 +259,7 @@ section {
   width: 100%;
 }
 
-.all-projects-section,
-.about-content-section {
+.all-projects-section, .about-content-section {
   padding-top: 1rem;
 }
 
@@ -329,9 +270,6 @@ section {
   color: var(--text-main) !important;
 }
 
-/* ==========================================================================
-   Skills Grid (Bullet Point Standard: Plus Jakarta Sans 500)
-   ========================================================================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -382,9 +320,6 @@ section {
   color: var(--accent-primary);
 }
 
-/* ==========================================================================
-   Projects Grid & 2x2 Tech Stack
-   ========================================================================== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -429,8 +364,7 @@ section {
   transition: var(--transition);
 }
 
-.project-links a:hover,
-.project-links a.live-link {
+.project-links a:hover, .project-links a.live-link {
   color: var(--accent-primary);
 }
 
@@ -473,9 +407,6 @@ section {
   font-weight: 600;
 }
 
-/* ==========================================================================
-   About Page Content
-   ========================================================================== */
 .about-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
@@ -492,8 +423,7 @@ section {
   box-shadow: var(--shadow-lg);
 }
 
-.about-card h2,
-.about-card .sub-heading {
+.about-card h2, .about-card .sub-heading {
   font-size: 1.95rem;
   margin-bottom: 0.85rem;
   color: var(--text-main) !important;
@@ -520,9 +450,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* ==========================================================================
-   Contact Section
-   ========================================================================== */
 .contact-section {
   padding-bottom: 3.5rem;
 }
@@ -566,9 +493,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -580,9 +504,6 @@ footer {
   background: var(--bg-surface);
 }
 
-/* ==========================================================================
-   Page Load Entry Animations
-   ========================================================================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -605,26 +526,41 @@ footer {
   }
 }
 
-.skill-card,
-.project-card,
-.about-card,
-.contact-box {
+.skill-card,.project-card,.about-card, .contact-box {
   animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .skills-grid .skill-card:nth-child(1),
-.projects-grid .project-card:nth-child(1) { animation-delay: 0.2s; }
-.skills-grid .skill-card:nth-child(2),
-.projects-grid .project-card:nth-child(2) { animation-delay: 0.28s; }
-.skills-grid .skill-card:nth-child(3),
-.projects-grid .project-card:nth-child(3) { animation-delay: 0.36s; }
-.projects-grid .project-card:nth-child(4) { animation-delay: 0.44s; }
-.projects-grid .project-card:nth-child(5) { animation-delay: 0.52s; }
-.projects-grid .project-card:nth-child(6) { animation-delay: 0.60s; }
 
-.contact-box,
-.about-card {
-  animation-delay: 0.3s;
+.projects-grid .project-card:nth-child(1) { 
+    animation-delay: 0.25s; 
+}
+
+.skills-grid .skill-card:nth-child(2),
+
+.projects-grid .project-card:nth-child(2) { 
+    animation-delay: 0.25s; 
+}
+
+.skills-grid .skill-card:nth-child(3),
+
+.projects-grid .project-card:nth-child(3) { 
+    animation-delay: 0.37s; 
+}
+.projects-grid .project-card:nth-child(4) { 
+    animation-delay: 0.47s; 
+}
+
+.projects-grid .project-card:nth-child(5) { 
+    animation-delay: 0.50s; 
+}
+
+.projects-grid .project-card:nth-child(6) { 
+    animation-delay: 0.67s; 
+}
+
+.contact-box, .about-card {
+  animation-delay: 0.37s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -637,9 +573,6 @@ footer {
   }
 }
 
-/* ==========================================================================
-   Responsive Adjustments
-   ========================================================================== */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 1.25rem;
@@ -653,9 +586,7 @@ footer {
     font-size: 0.88rem;
   }
 
-  .hero-section,
-  .page-header,
-  .page-header-wrapper {
+  .hero-section, .page-header, .page-header-wrapper {
     padding: 2.25rem 1rem 0.5rem;
   }
 
