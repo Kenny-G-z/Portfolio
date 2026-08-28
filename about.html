@@ -1,35 +1,61 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>
-        About Me
-    </title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Kenny G</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <h1>
-        About Me
-    </h1>
 
-    <br>
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="index.html" class="logo">&lt;Kenny.dev/&gt;</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#contact" class="btn-nav">Contact</a>
+    </nav>
+  </header>
 
-    <p>I'm Kenneth Gosala, a highschool student who aspires to further my education in the computer science world. </p>
-    <p>I'm currently learning Python & HTML over the summer. In Junior Year, I will be learning Java & the basics of cybersecurity.</p>
+  <main>
+    <section class="page-header">
+      <h1 class="page-title">About Me</h1>
+      <p class="page-subtitle">A glimpse into my development philosophy, skillset, and coding journey.</p>
+    </section>
 
-    <hr>
-    
-    <footer>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="goals.html">Goals</a>
-        </nav>
-    </footer>
+    <section class="about-content-section">
+      <div class="about-card">
+        <h2>Who I Am</h2>
+        <p>
+          I am a Front-End Developer with a passion for building clean, performant, and user-centric web applications. I love taking complex logic—whether that's parsing real-time meteorological API responses, evaluating security entropy via Regular Expressions, or engineering game state machines—and translating it into intuitive interfaces.
+        </p>
+        
+        <h2 class="sub-heading">My Approach</h2>
+        <p>
+          I prioritize semantic markup, fast load times, accessible design, and responsive styling. I believe great software is built at the intersection of robust programming logic and thoughtful visual presentation.
+        </p>
+
+        <h2 class="sub-heading">Continuous Learning</h2>
+        <p>
+          Currently, I'm continually refining my JavaScript fundamentals, exploring modern front-end tooling, and building focused utility projects that solve real day-to-day problems.
+        </p>
+
+        <div class="about-actions">
+          <a href="index.html#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="projects.html" class="btn btn-secondary">Check Out My Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Kenny G. Designed & built with clean code.</p>
+  </footer>
+
 </body>
-
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenny G | Front-End Developer Portfolio</title>
+  <title>Kenny G | Front-End Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,79 +13,81 @@
 
   <!-- Navigation -->
   <header class="navbar">
-    <a href="#hero" class="logo"><span>&lt;</span>Kenny.dev<span>/&gt;</span></a>
+    <a href="index.html" class="logo">&lt;Kenny.dev/&gt;</a>
     <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="btn-nav">Get In Touch</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="#contact" class="btn-nav">Contact</a>
     </nav>
   </header>
 
   <main>
     <!-- Hero Section -->
-    <section id="hero" class="hero-section">
+    <section class="hero-section">
       <div class="hero-glow"></div>
       <div class="hero-content">
-        <div class="badge">🚀 Available for Front-End Roles & Projects</div>
-        <h1>Hi, I'm <span class="gradient-text">Kenny</span>.<br>I craft responsive web experiences.</h1>
+        <span class="badge">🚀 Available for Front-End Roles & Projects</span>
+        <h1>Hi, I'm <span class="gradient-text">Kenny</span>.<br>I build responsive web experiences.</h1>
         <p class="hero-subtext">
-          Front-End Developer focused on building clean, performant, and interactive web applications with modern JavaScript, responsive CSS, and RESTful APIs.
+          Front-End Developer focused on clean UI architecture, interactive JavaScript applications, and modern responsive design.
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Featured Work</a>
-          <a href="https://github.com/Kenny-G-z" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile</a>
+          <a href="projects.html" class="btn btn-primary">Explore All Projects</a>
+          <a href="https://github.com/Kenny-G-z" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile ↗</a>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <h2 class="section-title">Technical Toolbelt</h2>
+    <!-- Skills Snapshot -->
+    <section class="skills-section">
+      <h2 class="section-title">Core Skills</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon">⚡</div>
-          <h3>Front-End</h3>
-          <p>HTML5, Modern CSS3, JavaScript (ES6+), Responsive Design, Flexbox/Grid</p>
+          <h3>Front-End UI</h3>
+          <p>HTML5, Modern CSS3, Flexbox/Grid, Responsive Layouts, UI Styling</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🔗</div>
-          <h3>APIs & State</h3>
-          <p>RESTful APIs, Fetch / Async-Await, Dynamic DOM Manipulation, JSON Handling</p>
+          <h3>JavaScript & APIs</h3>
+          <p>ES6+ Syntax, Fetch API, Async/Await, Real-time DOM Manipulation, RegEx</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🛠️</div>
           <h3>Tooling & Workflow</h3>
-          <p>Git, GitHub, GitHub Pages, RegEx, Modern UI/UX Prototyping</p>
+          <p>Git, GitHub, GitHub Pages, Web Performance, Browser DevTools</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <h2 class="section-title">Featured Projects</h2>
+    <!-- Featured Projects Spotlight (Top 3) -->
+    <section class="featured-section">
+      <div class="section-header-row">
+        <h2 class="section-title">Featured Highlights</h2>
+        <a href="projects.html" class="view-all-link">View all 6 projects →</a>
+      </div>
+      
       <div class="projects-grid">
-
-        <!-- Project 1: AI Chatbot -->
+        <!-- AI Chatbot -->
         <article class="project-card">
           <div class="project-header">
             <span class="project-tag">API Integration</span>
             <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/AI-Chatbot" target="_blank" rel="noopener noreferrer" title="View Source">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/AI-Chatbot/" target="_blank" rel="noopener noreferrer" class="live-link" title="Live Demo">Live Demo ↗</a>
+              <a href="https://github.com/Kenny-G-z/AI-Chatbot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://kenny-g-z.github.io/AI-Chatbot/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
             </div>
           </div>
           <h3>AI Chatbot</h3>
-          <p>Interactive conversational AI interface featuring dynamic message streaming, session state management, and real-time prompt rendering.</p>
+          <p>Conversational AI interface featuring dynamic response streaming, auto-scrolling message feeds, and async request handling.</p>
           <div class="tech-stack">
             <span>JavaScript</span>
             <span>REST API</span>
             <span>CSS3</span>
-            <span>DOM API</span>
           </div>
         </article>
 
-        <!-- Project 2: Weather App -->
+        <!-- Weather App -->
         <article class="project-card">
           <div class="project-header">
             <span class="project-tag">RESTful API</span>
@@ -95,16 +97,15 @@
             </div>
           </div>
           <h3>Weather App</h3>
-          <p>Real-time forecasting dashboard querying meteorological APIs for live temperature, humidity, wind conditions, and multi-day forecasts.</p>
+          <p>Real-time weather dashboard querying meteorological APIs for live temperature, humidity, wind conditions, and multi-day forecasts.</p>
           <div class="tech-stack">
-            <span>JavaScript (ES6+)</span>
-            <span>Fetch / Async</span>
+            <span>JavaScript</span>
+            <span>Fetch API</span>
             <span>JSON</span>
-            <span>Responsive UI</span>
           </div>
         </article>
 
-        <!-- Project 3: Wordle Clone -->
+        <!-- Wordle Clone -->
         <article class="project-card">
           <div class="project-header">
             <span class="project-tag">Game Logic</span>
@@ -114,78 +115,13 @@
             </div>
           </div>
           <h3>Wordle Clone</h3>
-          <p>Browser puzzle game featuring multi-attempt tile evaluation algorithms, synchronized virtual/physical keyboards, and CSS flip animations.</p>
+          <p>Word puzzle game featuring multi-attempt tile evaluation algorithms, dual virtual/physical keyboard inputs, and flip animations.</p>
           <div class="tech-stack">
             <span>JavaScript</span>
-            <span>Array Algorithms</span>
-            <span>Keyframe Animations</span>
-          </div>
-        </article>
-
-        <!-- Project 4: Password Evaluator -->
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">Security Utility</span>
-            <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/Password-Evaluator" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/Password-Evaluator/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
-            </div>
-          </div>
-          <h3>Password Evaluator</h3>
-          <p>Client-side security utility analyzing complexity in real time using RegEx pattern matching, zero-dependency execution, and visual entropy scoring.</p>
-          <div class="tech-stack">
-            <span>RegEx</span>
-            <span>Input Validation</span>
-            <span>Real-time DOM</span>
-          </div>
-        </article>
-
-        <!-- Project 5: Roshambeaux -->
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">Interactive Game</span>
-            <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/Roshambeaux" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/Roshambeaux/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
-            </div>
-          </div>
-          <h3>Roshambeaux</h3>
-          <p>Interactive Rock-Paper-Scissors web application featuring custom state management, randomized choice logic, and responsive win/loss visual feedback.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
+            <span>CSS Animations</span>
             <span>State Management</span>
-            <span>CSS Transitions</span>
           </div>
         </article>
-
-        <!-- Project 6: Personal Portfolio -->
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-tag">Web Design</span>
-            <div class="project-links">
-              <a href="https://github.com/Kenny-G-z/Portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a href="https://kenny-g-z.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="live-link">Live Demo ↗</a>
-            </div>
-          </div>
-          <h3>Developer Portfolio</h3>
-          <p>Custom modern dark-theme single page portfolio built with performance-first styling, CSS custom properties, and fluid responsive grid design.</p>
-          <div class="tech-stack">
-            <span>Semantic HTML5</span>
-            <span>Modern CSS</span>
-            <span>Responsive Layout</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-      <div class="about-card">
-        <h2 class="section-title text-left">About Me</h2>
-        <p>
-          I am a passionate Front-End Developer with a strong focus on clean architecture, intuitive UI interactions, and accessible code. Whether building dynamic dashboards with asynchronous REST APIs or developing interactive browser games, I enjoy transforming complex logic into simple, delightful user experiences.
-        </p>
       </div>
     </section>
 
@@ -206,6 +142,5 @@
     <p>© 2026 Kenny G. Designed & built with clean code.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
