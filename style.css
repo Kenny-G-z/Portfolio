@@ -90,7 +90,7 @@ main {
 }
 
 /* ==========================================================================
-   Centered Pacifico Headings
+   Centered Pacifico Headings (Clean Dark Text by Default)
    ========================================================================== */
 h1, h2, h3,
 .section-title,
@@ -99,6 +99,7 @@ h1, h2, h3,
   font-weight: 400;
   letter-spacing: 0.01em;
   text-align: center;
+  color: var(--text-main);
 }
 
 /* ==========================================================================
@@ -109,7 +110,7 @@ h1, h2, h3,
   justify-content: space-between;
   align-items: center;
   padding: 1.15rem 2.5rem;
-  width: 100%;                  /* Spans the full page edge-to-edge */
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -154,7 +155,7 @@ h1, h2, h3,
 }
 
 /* ==========================================================================
-   Unified Buttons (All Identical Background & Text)
+   Unified Buttons
    ========================================================================== */
 .btn,
 .btn-primary,
@@ -247,7 +248,6 @@ h1, h2, h3,
   text-align: center;
 }
 
-/* Mostly Blue with a Touch of Purple at the Tail */
 .gradient-text {
   font-family: var(--font-title);
   font-weight: 400;
@@ -295,7 +295,7 @@ section {
 }
 
 /* ==========================================================================
-   Skills Grid & Standard Bullet Points
+   Skills Grid (Non-Blue Subtitle & Real Round Bullets)
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -323,11 +323,10 @@ section {
 .skill-card h3 {
   font-size: 1.55rem;
   margin-bottom: 1.25rem;
-  color: var(--accent-primary);
+  color: var(--text-main); /* Removed blue */
   text-align: center;
 }
 
-/* Real Standard Round Bullet Points */
 .skill-list {
   list-style-type: disc;
   list-style-position: inside;
@@ -440,7 +439,7 @@ section {
 }
 
 /* ==========================================================================
-   About Page Content
+   About Page Content (Non-Blue Subtitle)
    ========================================================================== */
 .about-card {
   background: var(--bg-surface);
@@ -461,13 +460,14 @@ section {
 .about-card h2 {
   font-size: 1.95rem;
   margin-bottom: 0.85rem;
-  color: var(--accent-primary);
+  color: var(--text-main); /* Removed blue */
   text-align: center;
 }
 
 .about-card .sub-heading {
   margin-top: 2rem;
   text-align: center;
+  color: var(--text-main);
 }
 
 .about-card p {
@@ -480,13 +480,13 @@ section {
 .about-actions {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.75rem;
   margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
 /* ==========================================================================
-   Contact Section
+   Contact Section (Spaced Out Action Buttons)
    ========================================================================== */
 .contact-section {
   padding-bottom: 3.5rem;
@@ -515,47 +515,20 @@ section {
 .contact-box p {
   color: var(--text-muted);
   font-size: 1.05rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-.contact-card-chips {
+/* Generous Spacing for the Contact Buttons */
+.contact-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.75rem;
-}
-
-.contact-chip {
-  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.85rem 1.4rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.contact-chip:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.contact-chip .chip-icon {
-  font-size: 1.1rem;
-  color: var(--accent-primary);
+  gap: 2rem; /* Spaced out */
+  flex-wrap: wrap;
 }
 
 /* ==========================================================================
@@ -661,7 +634,8 @@ footer {
     padding: 2.25rem 1.25rem;
   }
 
-  .contact-card-chips {
+  .contact-buttons {
+    gap: 1rem;
     flex-direction: column;
     align-items: stretch;
   }
