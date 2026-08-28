@@ -23,7 +23,7 @@
   --text-muted: #475569;
   --text-dim: #94a3b8;
 
-  /* Color Balance: Primarily Blue/Indigo with a Hint of Purple */
+  /* Color Balance */
   --accent-primary: #2563eb;          /* Vibrant Royal Blue */
   --accent-primary-hover: #1d4ed8;    /* Deep Blue */
   --accent-secondary: #4f46e5;        /* Indigo */
@@ -83,6 +83,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-body);
 }
 
 main {
@@ -90,16 +91,34 @@ main {
 }
 
 /* ==========================================================================
-   Centered Pacifico Headings (Clean Dark Text by Default)
+   All Titles: Pacifico (Centered, Dark, No Blue)
    ========================================================================== */
-h1, h2, h3,
+h1, h2, h3, h4,
 .section-title,
 .page-title {
   font-family: var(--font-title);
   font-weight: 400;
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--text-main);
+  color: var(--text-main) !important;
+}
+
+/* ==========================================================================
+   All Non-Titles: Explicitly Plus Jakarta Sans
+   ========================================================================== */
+p, 
+span, 
+a, 
+li, 
+label, 
+input, 
+textarea, 
+button,
+.hero-subtext,
+.page-subtitle,
+.badge,
+footer {
+  font-family: var(--font-body);
 }
 
 /* ==========================================================================
@@ -121,17 +140,17 @@ h1, h2, h3,
 }
 
 .logo {
-  font-family: var(--font-title);
+  font-family: var(--font-title) !important;
   font-weight: 400;
   font-size: 1.55rem;
-  color: var(--accent-primary);
+  color: var(--accent-primary) !important;
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: var(--transition);
 }
 
 .logo:hover {
-  color: var(--accent-primary-hover);
+  color: var(--accent-primary-hover) !important;
   transform: scale(1.04) rotate(-1deg);
 }
 
@@ -193,13 +212,14 @@ h1, h2, h3,
 }
 
 /* ==========================================================================
-   Hero & Page Headers
+   Hero & Compact Page Headers
    ========================================================================== */
 .hero-section,
+.page-header,
 .page-header-wrapper {
   position: relative;
   text-align: center;
-  padding: 3.5rem 1.5rem 1.75rem;
+  padding: 3rem 1.5rem 0.5rem;
   overflow: hidden;
 }
 
@@ -243,8 +263,8 @@ h1, h2, h3,
 .page-title {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.25;
-  margin-bottom: 0.85rem;
-  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  color: var(--text-main) !important;
   text-align: center;
 }
 
@@ -258,12 +278,22 @@ h1, h2, h3,
   -webkit-text-fill-color: transparent;
 }
 
-.hero-subtext,
-.page-subtitle {
+.hero-subtext {
   font-size: 1.15rem;
   color: var(--text-muted);
   margin-bottom: 1.75rem;
-  font-weight: 400;
+  font-weight: 500;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
@@ -283,19 +313,24 @@ h1, h2, h3,
 section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2.25rem 1.5rem;
+  padding: 1.5rem 1.5rem 2.25rem;
   width: 100%;
+}
+
+.all-projects-section,
+.about-content-section {
+  padding-top: 1rem;
 }
 
 .section-title {
   font-size: 2.2rem;
   margin-bottom: 1.75rem;
   text-align: center;
-  color: var(--text-main);
+  color: var(--text-main) !important;
 }
 
 /* ==========================================================================
-   Skills Grid (Non-Blue Subtitle & Real Round Bullets)
+   Skills Grid (Bullet Point Standard: Plus Jakarta Sans 500)
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -323,7 +358,7 @@ section {
 .skill-card h3 {
   font-size: 1.55rem;
   margin-bottom: 1.25rem;
-  color: var(--text-main); /* Removed blue */
+  color: var(--text-main) !important;
   text-align: center;
 }
 
@@ -402,19 +437,19 @@ section {
 .project-card h3 {
   font-size: 1.6rem;
   margin-bottom: 0.65rem;
-  color: var(--text-main);
+  color: var(--text-main) !important;
   text-align: center;
 }
 
 .project-card p {
   color: var(--text-muted);
   font-size: 0.95rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   flex-grow: 1;
   line-height: 1.6;
 }
 
-/* 2x2 Stack Grid */
 .tech-stack {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -424,7 +459,7 @@ section {
 }
 
 .tech-stack span {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono) !important;
   font-size: 0.72rem;
   background: var(--accent-tag-bg);
   color: var(--accent-tag-text);
@@ -439,7 +474,7 @@ section {
 }
 
 /* ==========================================================================
-   About Page Content (Non-Blue Subtitle)
+   About Page Content
    ========================================================================== */
 .about-card {
   background: var(--bg-surface);
@@ -457,22 +492,22 @@ section {
   box-shadow: var(--shadow-lg);
 }
 
-.about-card h2 {
+.about-card h2,
+.about-card .sub-heading {
   font-size: 1.95rem;
   margin-bottom: 0.85rem;
-  color: var(--text-main); /* Removed blue */
+  color: var(--text-main) !important;
   text-align: center;
 }
 
 .about-card .sub-heading {
   margin-top: 2rem;
-  text-align: center;
-  color: var(--text-main);
 }
 
 .about-card p {
   color: var(--text-muted);
   font-size: 1.05rem;
+  font-weight: 500;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -486,7 +521,7 @@ section {
 }
 
 /* ==========================================================================
-   Contact Section (Spaced Out Action Buttons)
+   Contact Section
    ========================================================================== */
 .contact-section {
   padding-bottom: 3.5rem;
@@ -508,13 +543,14 @@ section {
 .contact-box h2 {
   font-size: 2.3rem;
   margin-bottom: 0.5rem;
-  color: var(--text-main);
+  color: var(--text-main) !important;
   text-align: center;
 }
 
 .contact-box p {
   color: var(--text-muted);
   font-size: 1.05rem;
+  font-weight: 500;
   margin-bottom: 2.25rem;
   max-width: 540px;
   margin-left: auto;
@@ -522,12 +558,11 @@ section {
   text-align: center;
 }
 
-/* Generous Spacing for the Contact Buttons */
 .contact-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Spaced out */
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -540,6 +575,7 @@ footer {
   border-top: 1px solid var(--border-color);
   color: var(--text-dim);
   font-size: 0.85rem;
+  font-weight: 500;
   margin-top: auto;
   background: var(--bg-surface);
 }
@@ -618,8 +654,9 @@ footer {
   }
 
   .hero-section,
+  .page-header,
   .page-header-wrapper {
-    padding: 2.5rem 1rem 1.5rem;
+    padding: 2.25rem 1rem 0.5rem;
   }
 
   .skill-card {
