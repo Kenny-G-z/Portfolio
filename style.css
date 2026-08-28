@@ -13,29 +13,30 @@
   --text-main: #0f172a;
   --text-muted: #64748b;
 
-  /* Colorful Accents */
+  /* Vibrant Accents */
   --accent-primary: #4f46e5;       /* Indigo */
   --accent-primary-hover: #4338ca;
   --accent-secondary: #0ea5e9;     /* Sky Blue */
-  --accent-purple: #9333ea;        /* Vibrant Purple */
   --accent-tag-bg: #eef2ff;        /* Soft Indigo Tint */
   --accent-tag-text: #4338ca;
 
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.03);
-  --shadow-lg: 0 12px 28px rgba(79, 70, 229, 0.12), 0 4px 8px rgba(15, 23, 42, 0.04);
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 10px 25px rgba(79, 70, 229, 0.12), 0 4px 10px rgba(15, 23, 42, 0.04);
 
+  /* Typography & Layout */
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Fira Code', monospace;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-full: 9999px;
-  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  --max-width: 1200px;
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --max-width: 1100px;
 }
 
 /* ==========================================================================
-   Global Reset & Base Styles
+   Reset & Base Styles
    ========================================================================== */
 * {
   box-sizing: border-box;
@@ -68,15 +69,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: 1.15rem 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(248, 250, 252, 0.88);
-  backdrop-filter: blur(14px);
+  background: rgba(248, 250, 252, 0.9);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -116,14 +117,13 @@ main {
 .btn-nav {
   background: var(--accent-tag-bg);
   color: var(--accent-primary) !important;
-  padding: 0.45rem 1rem;
+  padding: 0.4rem 0.9rem;
   border-radius: var(--radius-md);
   border: 1px solid #c7d2fe;
 }
 
 .btn-nav:hover {
   background: #e0e7ff;
-  border-color: var(--accent-primary);
 }
 
 /* ==========================================================================
@@ -131,24 +131,24 @@ main {
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 65vh;
+  min-height: 44vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5rem 1.5rem 3rem;
+  padding: 3.5rem 1.5rem 2rem;
   overflow: hidden;
 }
 
 .hero-glow {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, rgba(14, 165, 233, 0.08) 50%, transparent 75%);
-  filter: blur(80px);
+  width: 500px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, rgba(14, 165, 233, 0.06) 50%, transparent 70%);
+  filter: blur(60px);
   z-index: 0;
   pointer-events: none;
 }
@@ -156,7 +156,7 @@ main {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 820px;
+  max-width: 800px;
 }
 
 .badge {
@@ -164,18 +164,18 @@ main {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent-primary);
-  background: #eef2ff;
+  background: var(--accent-tag-bg);
   border: 1px solid #c7d2fe;
   padding: 0.35rem 1rem;
   border-radius: var(--radius-full);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
   letter-spacing: -0.03em;
   color: var(--text-main);
 }
@@ -190,10 +190,7 @@ main {
 .hero-subtext {
   font-size: 1.15rem;
   color: var(--text-muted);
-  margin-bottom: 2.25rem;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 1.75rem;
 }
 
 .hero-actions {
@@ -203,11 +200,11 @@ main {
   flex-wrap: wrap;
 }
 
-/* Secondary Page Headers */
+/* Secondary Page Headers (Projects & About) */
 .page-header {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 4rem 1.5rem 1rem;
+  padding: 3.5rem 1.5rem 1.5rem;
   text-align: center;
 }
 
@@ -215,7 +212,7 @@ main {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: var(--text-main);
 }
 
@@ -233,10 +230,10 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.6rem;
+  padding: 0.7rem 1.5rem;
   border-radius: var(--radius-md);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   transition: var(--transition);
   cursor: pointer;
@@ -245,13 +242,13 @@ main {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-primary), #6366f1);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
   border: none;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
   background: linear-gradient(135deg, var(--accent-primary-hover), #4f46e5);
 }
 
@@ -269,19 +266,19 @@ main {
 }
 
 /* ==========================================================================
-   Section Layouts & Grids
+   Section Layouts
    ========================================================================== */
 section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 2.75rem 1.5rem;
   width: 100%;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 800;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--text-main);
@@ -291,7 +288,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .section-header-row .section-title {
@@ -313,7 +310,7 @@ section {
 }
 
 /* ==========================================================================
-   Skills Grid & Cards
+   Skills Grid (Home Page)
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -325,7 +322,7 @@ section {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2rem 1.75rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   display: flex;
@@ -334,7 +331,7 @@ section {
 
 .skill-card:hover {
   border-color: #cbd5e1;
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
 
@@ -343,6 +340,7 @@ section {
   margin-bottom: 1.25rem;
   color: var(--text-main);
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .skill-list {
@@ -366,12 +364,12 @@ section {
   font-weight: bold;
   font-size: 1.2rem;
   display: inline-block;
-  width: 1.25rem;
+  width: 1.2rem;
   line-height: 1;
 }
 
 /* ==========================================================================
-   Project Cards & 2x2 Tech Stack Grid
+   Projects Grid & Cards (Projects Page)
    ========================================================================== */
 .projects-grid {
   display: grid;
@@ -393,7 +391,7 @@ section {
 
 .project-card:hover {
   border-color: #cbd5e1;
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -401,7 +399,7 @@ section {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .project-links {
@@ -424,7 +422,7 @@ section {
 
 .project-card h3 {
   font-size: 1.35rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
   font-weight: 700;
   color: var(--text-main);
 }
@@ -437,7 +435,7 @@ section {
   line-height: 1.6;
 }
 
-/* 2x2 Stack Grid */
+/* 2x2 Tech Stack Grid */
 .tech-stack {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -474,9 +472,10 @@ section {
 }
 
 .about-card h2 {
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   margin-bottom: 0.85rem;
   color: var(--text-main);
+  font-weight: 700;
 }
 
 .about-card .sub-heading {
@@ -498,22 +497,26 @@ section {
 }
 
 /* ==========================================================================
-   Contact Section
+   Contact Section (Home Page)
    ========================================================================== */
+.contact-section {
+  padding-bottom: 4rem;
+}
+
 .contact-box {
-  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
-  border: 1px solid #e0e7ff;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 3.5rem 2rem;
+  padding: 2.75rem 2rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   box-shadow: var(--shadow-sm);
 }
 
 .contact-box h2 {
-  font-size: 2.1rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.85rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
   color: var(--text-main);
 }
@@ -521,10 +524,7 @@ section {
 .contact-box p {
   color: var(--text-muted);
   font-size: 1.05rem;
-  margin-bottom: 2rem;
-  max-width: 550px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 1.75rem;
 }
 
 .contact-buttons {
@@ -539,7 +539,7 @@ section {
    ========================================================================== */
 footer {
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 2rem 1rem;
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.85rem;
@@ -564,20 +564,26 @@ footer {
   }
 
   .hero-section {
-    min-height: auto;
-    padding: 3.5rem 1rem 2rem;
+    padding: 2.75rem 1rem 1.5rem;
   }
 
-  .section-header-row {
-    flex-direction: column;
-    gap: 0.5rem;
+  .page-header {
+    padding: 2.5rem 1rem 1rem;
   }
 
+  .skill-card {
+    padding: 1.5rem 1.25rem;
+  }
+  
   .about-card {
     padding: 2rem 1.5rem;
   }
+  
+  .contact-box {
+    padding: 2rem 1.25rem;
+  }
 
   .tech-stack {
-    grid-template-columns: 1fr; /* Stacks pills nicely on small screens */
+    grid-template-columns: 1fr;
   }
 }
